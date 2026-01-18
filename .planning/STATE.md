@@ -5,32 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-01-18)
 
 **Core value:** Smooth, distraction-free RSVP playback that actually helps users read faster through focused, single-word presentation with visual anchoring.
-**Current focus:** Phase 1 — Foundation + RSVP Engine
+**Current focus:** Phase 2 — Text Input Sources
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation + RSVP Engine)
-Plan: 3 of 3 complete
-Status: Phase complete
-Last activity: 2026-01-18 — Completed 01-03-PLAN.md
+Phase: 2 of 4 (Text Input Sources)
+Plan: 2 of 3 complete
+Status: In progress
+Last activity: 2026-01-18 — Completed 02-02-PLAN.md
 
-Progress: ███ 100%
+Progress: ████░░ 67%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
+- Total plans completed: 4
 - Average duration: 3.3 min
-- Total execution time: 0.17 hours
+- Total execution time: 0.22 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01    | 3     | 10min | 3.3min   |
+| 02    | 1     | 3min  | 3.0min   |
 
 **Recent Trend:**
-- Last 5 plans: 2min, 5min, 3min
+- Last 5 plans: 5min, 3min, 3min
 - Trend: Steady
 
 ## Accumulated Context
@@ -51,6 +52,9 @@ Recent decisions affecting current work:
 | 01-03 | Result type for validation | Clean success/failure with error types |
 | 01-03 | 10-50k char limits | Reasonable v1 scope (~30 min max read) |
 | 01-03 | State-driven transitions | hasLoadedText controls view switching |
+| 02-02 | Actor for PDFTextExtractor | Thread-safety for async operations |
+| 02-02 | PDFKit native API | No external dependencies needed |
+| 02-02 | Page-by-page extraction | Join with newlines for readable output |
 
 ### Pending Todos
 
@@ -58,10 +62,11 @@ None yet.
 
 ### Blockers/Concerns
 
-None yet.
+- Test target not configured in project (deferred for now)
+- Xcode package dependency issue (ReadabilityKit) - needs investigation
 
 ## Session Continuity
 
-Last session: 2026-01-18T18:53:20Z
-Stopped at: Completed 01-03-PLAN.md (Phase 01 complete)
+Last session: 2026-01-18T19:11:10Z
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None
