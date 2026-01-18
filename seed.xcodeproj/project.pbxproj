@@ -6,9 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		4D2C4CB22F1D141E00BBB4C3 /* seed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
