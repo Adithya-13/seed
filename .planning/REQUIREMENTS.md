@@ -85,18 +85,18 @@ Which phases cover which requirements. Updated by create-roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| RSVP-01 | Phase 1 | Pending |
-| RSVP-02 | Phase 1 | Pending |
-| RSVP-03 | Phase 1 | Pending |
-| RSVP-04 | Phase 1 | Pending |
-| RSVP-05 | Phase 1 | Pending |
-| RSVP-06 | Phase 1 | Pending |
-| RSVP-07 | Phase 1 | Pending |
-| RSVP-08 | Phase 1 | Pending |
-| RSVP-09 | Phase 1 | Pending |
-| RSVP-10 | Phase 1 | Pending |
+| RSVP-01 | Phase 1 | Complete |
+| RSVP-02 | Phase 1 | Complete |
+| RSVP-03 | Phase 1 | Complete |
+| RSVP-04 | Phase 1 | Complete |
+| RSVP-05 | Phase 1 | Complete |
+| RSVP-06 | Phase 1 | Complete |
+| RSVP-07 | Phase 1 | Complete |
+| RSVP-08 | Phase 1 | Complete |
+| RSVP-09 | Phase 1 | Complete |
+| RSVP-10 | Phase 1 | Complete |
 | RSVP-11 | Phase 3 | Pending |
-| INPUT-01 | Phase 1 | Pending |
+| INPUT-01 | Phase 1 | Complete |
 | INPUT-02 | Phase 2 | Pending |
 | INPUT-03 | Phase 2 | Pending |
 | INPUT-04 | Phase 2 | Pending |
