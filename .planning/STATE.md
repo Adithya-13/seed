@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-01-18)
 ## Current Position
 
 Phase: 2 of 4 (Text Input Sources)
-Plan: 2 of 3 complete
+Plan: 1 of 3 complete
 Status: In progress
-Last activity: 2026-01-18 — Completed 02-02-PLAN.md
+Last activity: 2026-01-19 — Completed 02-01-PLAN.md
 
-Progress: ████░░ 67%
+Progress: ████░░░░░░ 33%
 
 ## Performance Metrics
 
 **Velocity:**
 - Total plans completed: 4
-- Average duration: 3.3 min
-- Total execution time: 0.22 hours
+- Average duration: 3.8 min
+- Total execution time: 0.25 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01    | 3     | 10min | 3.3min   |
-| 02    | 1     | 3min  | 3.0min   |
+| 02    | 1     | 5min  | 5.0min   |
 
 **Recent Trend:**
-- Last 5 plans: 5min, 3min, 3min
+- Last 5 plans: 2min, 5min, 3min, 5min
 - Trend: Steady
 
 ## Accumulated Context
@@ -52,9 +52,9 @@ Recent decisions affecting current work:
 | 01-03 | Result type for validation | Clean success/failure with error types |
 | 01-03 | 10-50k char limits | Reasonable v1 scope (~30 min max read) |
 | 01-03 | State-driven transitions | hasLoadedText controls view switching |
-| 02-02 | Actor for PDFTextExtractor | Thread-safety for async operations |
-| 02-02 | PDFKit native API | No external dependencies needed |
-| 02-02 | Page-by-page extraction | Join with newlines for readable output |
+| 02-01 | Custom HTML stripping | ReadabilityKit archived, regex-based approach |
+| 02-01 | Actor for URLArticleExtractor | Thread-safe async URL fetching |
+| 02-01 | URLSession.shared | Built-in networking, no dependencies |
 
 ### Pending Todos
 
@@ -62,11 +62,10 @@ None yet.
 
 ### Blockers/Concerns
 
-- Test target not configured in project (deferred for now)
-- Xcode package dependency issue (ReadabilityKit) - needs investigation
+- Test target not configured in project (test files ready, infrastructure deferred)
 
 ## Session Continuity
 
-Last session: 2026-01-18T19:11:10Z
-Stopped at: Completed 02-02-PLAN.md
+Last session: 2026-01-19T02:13:22Z
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None
