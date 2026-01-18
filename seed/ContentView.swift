@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @State private var viewModel = RSVPViewModel()
     @State private var hasLoadedText = false
-    @State private var inputText = ""
 
     var body: some View {
         if hasLoadedText {
@@ -38,7 +37,7 @@ struct ContentView: View {
                 }
             }
         } else {
-            TextInputView(text: $inputText) { validatedText in
+            InputSourcePicker { validatedText in
                 viewModel.loadText(validatedText)
                 hasLoadedText = true
             }
@@ -47,7 +46,6 @@ struct ContentView: View {
 
     private func resetToInput() {
         hasLoadedText = false
-        inputText = ""
         viewModel.playbackState.pause()
     }
 }
