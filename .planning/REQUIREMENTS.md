@@ -85,12 +85,35 @@ Which phases cover which requirements. Updated by create-roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (Pending roadmap creation) | - | - |
+| RSVP-01 | Phase 1 | Pending |
+| RSVP-02 | Phase 1 | Pending |
+| RSVP-03 | Phase 1 | Pending |
+| RSVP-04 | Phase 1 | Pending |
+| RSVP-05 | Phase 1 | Pending |
+| RSVP-06 | Phase 1 | Pending |
+| RSVP-07 | Phase 1 | Pending |
+| RSVP-08 | Phase 1 | Pending |
+| RSVP-09 | Phase 1 | Pending |
+| RSVP-10 | Phase 1 | Pending |
+| RSVP-11 | Phase 3 | Pending |
+| INPUT-01 | Phase 1 | Pending |
+| INPUT-02 | Phase 2 | Pending |
+| INPUT-03 | Phase 2 | Pending |
+| INPUT-04 | Phase 2 | Pending |
+| UX-01 | Phase 3 | Pending |
+| UX-02 | Phase 3 | Pending |
+| UX-03 | Phase 3 | Pending |
+| UX-04 | Phase 3 | Pending |
+| UX-05 | Phase 3 | Pending |
+| STATS-01 | Phase 4 | Pending |
+| STATS-02 | Phase 4 | Pending |
+| STATS-03 | Phase 4 | Pending |
+| STATS-04 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 25 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 25 ⚠️
+- v1 requirements: 24 total
+- Mapped to phases: 24
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-01-18*
