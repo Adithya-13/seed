@@ -10,8 +10,8 @@ Four-phase journey from core RSVP engine to feature-complete App Store release. 
 - Integer phases (1, 2, 3, 4): Planned milestone work
 - Decimal phases (X.1, X.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Foundation + RSVP Engine** - Core timing, display engine, smart anchoring
-- [ ] **Phase 2: Text Input Sources** - URL and PDF import
+- [x] **Phase 1: Foundation + RSVP Engine** - Core timing, display engine, smart anchoring
+- [x] **Phase 2: Text Input Sources** - URL and PDF import
 - [ ] **Phase 3: UX Polish + Accessibility** - Settings, themes, onboarding, HIG compliance
 - [ ] **Phase 4: Stats + Comprehension** - Performance tracking, comprehension validation
 
@@ -45,7 +45,9 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] TBD (to be defined during planning)
+- [x] 02-01: URL Article Extraction
+- [x] 02-02: PDF Text Extraction
+- [x] 02-03: Multi-Source Input UI
 
 ### Phase 3: UX Polish + Accessibility
 **Goal**: App Store ready with polished UX and accessibility compliance
@@ -84,7 +86,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation + RSVP Engine | 0/TBD | Not started | - |
-| 2. Text Input Sources | 0/TBD | Not started | - |
+| 1. Foundation + RSVP Engine | 3/3 | Complete | 2026-01-18 |
+| 2. Text Input Sources | 3/3 | Complete | 2026-01-19 |
 | 3. UX Polish + Accessibility | 0/TBD | Not started | - |
 | 4. Stats + Comprehension | 0/TBD | Not started | - |

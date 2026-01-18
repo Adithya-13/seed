@@ -24,9 +24,9 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Text Input
 
 - [ ] **INPUT-01**: User can paste text from clipboard into reader
-- [ ] **INPUT-02**: User can import article from URL (web article extraction)
-- [ ] **INPUT-03**: User can import text from PDF file (text extraction)
-- [ ] **INPUT-04**: User can select input source from multiple options
+- [x] **INPUT-02**: User can import article from URL (web article extraction)
+- [x] **INPUT-03**: User can import text from PDF file (text extraction)
+- [x] **INPUT-04**: User can select input source from multiple options
 
 ### UI/UX
 
