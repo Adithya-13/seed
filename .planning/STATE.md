@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-01-18)
 ## Current Position
 
 Phase: 1 of 4 (Foundation + RSVP Engine)
-Plan: 1 of 3 complete
+Plan: 2 of 3 complete
 Status: In progress
-Last activity: 2026-01-18 — Completed 01-01-PLAN.md
+Last activity: 2026-01-18 — Completed 01-02-PLAN.md
 
-Progress: █░░ 33%
+Progress: ██░ 67%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 2 min
-- Total execution time: 0.03 hours
+- Total plans completed: 2
+- Average duration: 3.5 min
+- Total execution time: 0.12 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01    | 1     | 2min  | 2min     |
+| 01    | 2     | 7min  | 3.5min   |
 
 **Recent Trend:**
-- Last 5 plans: 2min
-- Trend: Started
+- Last 5 plans: 2min, 5min
+- Trend: Steady
 
 ## Accumulated Context
 
@@ -45,6 +45,9 @@ Recent decisions affecting current work:
 | 01-01 | Use @Observable macro for state | Simpler syntax, modern SwiftUI pattern |
 | 01-01 | CADisplayLink for timing | 60fps precision vs Timer |
 | 01-01 | Dynamic timing formula | +50% for 8+ chars, +100% for punctuation |
+| 01-02 | ObservableObject for ViewModel | Connects to @Observable PlaybackState |
+| 01-02 | AttributedString for anchoring | Bold font weight for anchor letters |
+| 01-02 | Fixed frame on word display | Prevents layout shift between words |
 
 ### Pending Todos
 
@@ -56,6 +59,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-01-18T18:23:43Z
-Stopped at: Completed 01-01-PLAN.md
+Last session: 2026-01-18T18:47:30Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
