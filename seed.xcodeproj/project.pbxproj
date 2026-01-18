@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4D2C4D3C2F1D675600BBB4C3 /* Readability in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2C4CC12F1D141F00BBB4C5 /* Readability */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4D2C4CB22F1D141E00BBB4C3 /* seed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2C4D3C2F1D675600BBB4C3 /* Readability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = seed;
 			packageProductDependencies = (
+				4D2C4CC12F1D141F00BBB4C5 /* Readability */,
 			);
 			productName = seed;
 			productReference = 4D2C4CB22F1D141E00BBB4C3 /* seed.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 4D2C4CA92F1D141E00BBB4C3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4D2C4CC02F1D141F00BBB4C4 /* XCRemoteSwiftPackageReference "ReadabilityKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4D2C4CB32F1D141E00BBB4C3 /* Products */;
 			projectDirPath = "";
@@ -332,6 +341,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D2C4CC02F1D141F00BBB4C4 /* XCRemoteSwiftPackageReference "ReadabilityKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ReadabilityKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D2C4CC12F1D141F00BBB4C5 /* Readability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D2C4CC02F1D141F00BBB4C4 /* XCRemoteSwiftPackageReference "ReadabilityKit" */;
+			productName = Readability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D2C4CAA2F1D141E00BBB4C3 /* Project object */;
 }
