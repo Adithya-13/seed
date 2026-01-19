@@ -19,7 +19,7 @@ struct OnboardingView: View {
                 WelcomePage()
                     .tag(0)
 
-                RSVPDemoPage()
+                RSVPDemoPage(settings: settings)
                     .tag(1)
 
                 BenefitsPage()
@@ -70,6 +70,7 @@ struct WelcomePage: View {
 }
 
 struct RSVPDemoPage: View {
+    var settings: AppSettings
     @State private var playbackState = PlaybackState()
     @State private var engine: RSVPEngine?
 
@@ -81,7 +82,7 @@ struct RSVPDemoPage: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
 
-            RSVPDisplayView(playbackState: playbackState)
+            RSVPDisplayView(playbackState: playbackState, settings: settings)
                 .frame(height: 120)
 
             Text("Words appear one at a time.\nNo eye movement needed.")

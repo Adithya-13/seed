@@ -10,13 +10,14 @@ import SwiftUI
 struct ContentView: View {
     @State private var viewModel = RSVPViewModel()
     @State private var hasLoadedText = false
+    var settings: AppSettings
 
     var body: some View {
         if hasLoadedText {
             VStack(spacing: 32) {
                 Spacer()
 
-                RSVPDisplayView(playbackState: viewModel.playbackState)
+                RSVPDisplayView(playbackState: viewModel.playbackState, settings: settings)
 
                 Spacer()
 
@@ -29,7 +30,15 @@ struct ContentView: View {
                 )
             }
             .padding()
+            .preferredColorScheme(settings.colorScheme)
             .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink {
+                        SettingsView(settings: settings)
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Reset") {
                         resetToInput()
@@ -51,5 +60,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(settings: AppSettings())
 }
