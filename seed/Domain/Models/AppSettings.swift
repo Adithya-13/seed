@@ -11,6 +11,7 @@ import Observation
 @Observable
 class AppSettings {
     @ObservationIgnored @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
+    @ObservationIgnored @AppStorage("lastUsedWPM") var lastUsedWPM: Int = 250
     @ObservationIgnored @AppStorage("fontSize") var fontSize: Double = 32
     @ObservationIgnored @AppStorage("colorSchemeString") private var colorSchemeString: String = "system"
     @ObservationIgnored @AppStorage("focusMode") var focusMode: Bool = false
