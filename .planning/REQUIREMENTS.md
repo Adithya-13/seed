@@ -19,7 +19,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **RSVP-08**: User experiences smooth playback timing (CADisplayLink precision)
 - [ ] **RSVP-09**: User sees dynamic word duration (short words faster, long words slower)
 - [ ] **RSVP-10**: User experiences auto-slow at punctuation marks (sentence boundaries)
-- [ ] **RSVP-11**: User can enable focus mode (fullscreen, minimal UI distractions)
+- [x] **RSVP-11**: User can enable focus mode (fullscreen, minimal UI distractions)
 
 ### Text Input
 
@@ -30,11 +30,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### UI/UX
 
-- [ ] **UX-01**: User can adjust font size for comfortable reading
-- [ ] **UX-02**: User can toggle between light and dark themes
-- [ ] **UX-03**: User sees interactive onboarding that demos RSVP vs normal reading
-- [ ] **UX-04**: User interface follows Apple Human Interface Guidelines (native iOS patterns)
-- [ ] **UX-05**: User sees eye-friendly color palette during reading sessions
+- [x] **UX-01**: User can adjust font size for comfortable reading
+- [x] **UX-02**: User can toggle between light and dark themes
+- [x] **UX-03**: User sees interactive onboarding that demos RSVP vs normal reading
+- [x] **UX-04**: User interface follows Apple Human Interface Guidelines (native iOS patterns)
+- [x] **UX-05**: User sees eye-friendly color palette during reading sessions
 
 ### Stats & Validation
 
@@ -95,16 +95,16 @@ Which phases cover which requirements. Updated by create-roadmap.
 | RSVP-08 | Phase 1 | Complete |
 | RSVP-09 | Phase 1 | Complete |
 | RSVP-10 | Phase 1 | Complete |
-| RSVP-11 | Phase 3 | Pending |
+| RSVP-11 | Phase 3 | Complete |
 | INPUT-01 | Phase 1 | Complete |
-| INPUT-02 | Phase 2 | Pending |
-| INPUT-03 | Phase 2 | Pending |
-| INPUT-04 | Phase 2 | Pending |
-| UX-01 | Phase 3 | Pending |
-| UX-02 | Phase 3 | Pending |
-| UX-03 | Phase 3 | Pending |
-| UX-04 | Phase 3 | Pending |
-| UX-05 | Phase 3 | Pending |
+| INPUT-02 | Phase 2 | Complete |
+| INPUT-03 | Phase 2 | Complete |
+| INPUT-04 | Phase 2 | Complete |
+| UX-01 | Phase 3 | Complete |
+| UX-02 | Phase 3 | Complete |
+| UX-03 | Phase 3 | Complete |
+| UX-04 | Phase 3 | Complete |
+| UX-05 | Phase 3 | Complete |
 | STATS-01 | Phase 4 | Pending |
 | STATS-02 | Phase 4 | Pending |
 | STATS-03 | Phase 4 | Pending |
@@ -117,4 +117,4 @@ Which phases cover which requirements. Updated by create-roadmap.
 
 ---
 *Requirements defined: 2026-01-18*
-*Last updated: 2026-01-18 after initial definition*
+*Last updated: 2026-01-19 after Phase 3 completion*
