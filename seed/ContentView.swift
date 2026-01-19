@@ -32,6 +32,13 @@ struct ContentView: View {
                 }
                 .statusBarHidden(true)
                 .persistentSystemOverlays(.hidden)
+                .sheet(isPresented: $viewModel.sessionCompleted) {
+                    if let session = viewModel.lastSession {
+                        CompletionStatsView(session: session) {
+                            viewModel.sessionCompleted = false
+                        }
+                    }
+                }
             } else {
                 VStack(spacing: 32) {
                     Spacer()
@@ -63,6 +70,13 @@ struct ContentView: View {
                             resetToInput()
                         } label: {
                             Image(systemName: "arrow.counterclockwise")
+                        }
+                    }
+                }
+                .sheet(isPresented: $viewModel.sessionCompleted) {
+                    if let session = viewModel.lastSession {
+                        CompletionStatsView(session: session) {
+                            viewModel.sessionCompleted = false
                         }
                     }
                 }
