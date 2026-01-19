@@ -10,16 +10,17 @@ import SwiftUI
 @main
 struct seedApp: App {
     @State private var settings = AppSettings()
+    @State private var onboardingDismissed: Bool = false
 
     var body: some Scene {
         WindowGroup {
-            if settings.hasCompletedOnboarding {
-                NavigationStack {
-                    ContentView(settings: settings)
+            if !onboardingDismissed && !settings.hasCompletedOnboarding {
+                OnboardingView(settings: settings) {
+                    onboardingDismissed = true
                 }
             } else {
-                OnboardingView(settings: settings) {
-                    // Completion triggers view refresh via settings change
+                NavigationStack {
+                    ContentView(settings: settings)
                 }
             }
         }
