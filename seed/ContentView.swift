@@ -55,12 +55,14 @@ struct ContentView: View {
                         NavigationLink {
                             SettingsView(settings: settings)
                         } label: {
-                            Image(systemName: "gearshape")
+                            Image(systemName: "gearshape.fill")
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Reset") {
+                        Button {
                             resetToInput()
+                        } label: {
+                            Image(systemName: "arrow.counterclockwise")
                         }
                     }
                 }
