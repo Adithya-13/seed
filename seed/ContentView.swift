@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var viewModel: RSVPViewModel?
     @State private var hasLoadedText = false
     @State private var showFocusModeHint = false
+    @State private var showQuizPrompt = false
+    @State private var showQuiz = false
     var settings: AppSettings
 
     private var readingBackground: Color {
@@ -71,7 +73,22 @@ struct ContentView: View {
                     if let session = vm.lastSession {
                         CompletionStatsView(session: session) {
                             vm.sessionCompleted = false
+                            showQuizPrompt = true
                         }
+                    }
+                }
+                .alert("Take comprehension quiz?", isPresented: $showQuizPrompt) {
+                    Button("Yes") {
+                        showQuiz = true
+                    }
+                    Button("Skip", role: .cancel) {
+                        resetToInput()
+                    }
+                }
+                .sheet(isPresented: $showQuiz) {
+                    ComprehensionQuizView {
+                        showQuiz = false
+                        resetToInput()
                     }
                 }
             } else {
@@ -136,7 +153,22 @@ struct ContentView: View {
                     if let session = vm.lastSession {
                         CompletionStatsView(session: session) {
                             vm.sessionCompleted = false
+                            showQuizPrompt = true
                         }
+                    }
+                }
+                .alert("Take comprehension quiz?", isPresented: $showQuizPrompt) {
+                    Button("Yes") {
+                        showQuiz = true
+                    }
+                    Button("Skip", role: .cancel) {
+                        resetToInput()
+                    }
+                }
+                .sheet(isPresented: $showQuiz) {
+                    ComprehensionQuizView {
+                        showQuiz = false
+                        resetToInput()
                     }
                 }
             }
