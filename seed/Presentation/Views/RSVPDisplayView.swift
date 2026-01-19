@@ -11,13 +11,21 @@ struct RSVPDisplayView: View {
     @Bindable var playbackState: PlaybackState
     var settings: AppSettings
 
+    private var readingBackground: Color {
+        settings.colorScheme == .dark ? Color(red: 0.1, green: 0.1, blue: 0.12) : Color(red: 0.98, green: 0.97, blue: 0.95)
+    }
+
+    private var readingText: Color {
+        settings.colorScheme == .dark ? Color(red: 0.9, green: 0.88, blue: 0.85) : Color(red: 0.15, green: 0.15, blue: 0.2)
+    }
+
     var body: some View {
         VStack {
             if !playbackState.words.isEmpty && playbackState.currentIndex < playbackState.words.count {
                 Text(attributedWord)
                     .font(.system(size: settings.fontSize, weight: .medium, design: .default))
                     .frame(minWidth: 300, minHeight: 80)
-                    .foregroundStyle(Color.primary.opacity(0.9))
+                    .foregroundStyle(readingText)
             } else {
                 Text("")
                     .font(.system(size: settings.fontSize, weight: .medium, design: .default))
