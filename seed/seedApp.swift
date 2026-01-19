@@ -6,23 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct seedApp: App {
     @State private var settings = AppSettings()
-    @State private var onboardingDismissed: Bool = false
 
     var body: some Scene {
         WindowGroup {
-            if !onboardingDismissed && !settings.hasCompletedOnboarding {
-                OnboardingView(settings: settings) {
-                    onboardingDismissed = true
-                }
-            } else {
-                NavigationStack {
-                    ContentView(settings: settings)
-                }
+            NavigationStack {
+                ContentView(settings: settings)
             }
         }
+        .modelContainer(for: SavedText.self)
     }
 }
