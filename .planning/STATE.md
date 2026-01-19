@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-19)
 ## Current Position
 
 Phase: 6 of 9 (SwiftData Library)
-Plan: 1 of 3
+Plan: 2 of 3
 Status: In progress
-Last activity: 2026-01-19 — Completed 06-01-PLAN.md
+Last activity: 2026-01-19 — Completed 06-02-PLAN.md
 
-Progress: ████████████████░░░░░░░░░░░░ 59% (13 of 22 plans complete)
+Progress: ████████████████░░░░░░░░░░░░ 64% (14 of 22 plans complete)
 
 ## Performance
 
 **Velocity:**
-- Total plans completed: 13
-- Average duration: 3.8 min
-- Total execution time: 0.92 hours
+- Total plans completed: 14
+- Average duration: 3.9 min
+- Total execution time: 0.97 hours
 
 **By Phase:**
 
@@ -32,7 +32,7 @@ Progress: ████████████████░░░░░░░�
 | 03    | 3     | 20min | 6.7min   |
 | 04    | 2     | 9min  | 4.5min   |
 | 05    | 1     | 2min  | 2.0min   |
-| 06    | 1     | 3min  | 3.0min   |
+| 06    | 2     | 6min  | 3.0min   |
 
 ## Accumulated Context
 
@@ -49,6 +49,9 @@ See PROJECT.md Validated section — 8 major features shipped in v1.0.
 | 06-01 | SourceType enum for text/pdf/link | Differentiates input sources, enables SF Symbol icons |
 | 06-01 | Auto-calculate wordCount on init | Eliminates manual tracking, ensures consistency |
 | 06-01 | Search filters title and content | Comprehensive search experience |
+| 06-02 | Removed onboarding flow in v2 | Library-first experience, no onboarding per requirements |
+| 06-02 | Library default tab when texts exist | Library-first routing strategy |
+| 06-02 | Search tab reuses LibraryView | Search built-in via .searchable modifier |
 
 ### Blockers/Concerns
 
@@ -56,6 +59,6 @@ See PROJECT.md Validated section — 8 major features shipped in v1.0.
 
 ## Session Continuity
 
-Last session: 2026-01-19 16:22 UTC
-Stopped at: Completed 06-01-PLAN.md
+Last session: 2026-01-19 16:27 UTC
+Stopped at: Completed 06-02-PLAN.md
 Resume file: None
