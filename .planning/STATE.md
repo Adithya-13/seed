@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-01-18)
 ## Current Position
 
 Phase: 3 of 4 (UX Polish + Accessibility) — In progress
-Plan: 2 of 3 complete
-Status: Phase 3 in progress
-Last activity: 2026-01-19 — Completed 03-02-PLAN.md (Interactive Onboarding)
+Plan: 3 of 3 complete
+Status: Phase 3 complete
+Last activity: 2026-01-19 — Completed 03-01-PLAN.md (Settings Infrastructure)
 
-Progress: ████████████████████░░ (67% complete - 8/12 plans)
+Progress: ██████████████████████ (75% complete - 9/12 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 4.4 min
-- Total execution time: 0.58 hours
+- Total plans completed: 9
+- Average duration: 4.3 min
+- Total execution time: 0.65 hours
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: ████████████████████░░ (67
 |-------|-------|-------|----------|
 | 01    | 3     | 10min | 3.3min   |
 | 02    | 3     | 14min | 4.7min   |
-| 03    | 2     | 11min | 5.5min   |
+| 03    | 3     | 17min | 5.7min   |
 
 **Recent Trend:**
-- Last 5 plans: 3min, 5min, 3min, 5min, 6min
+- Last 5 plans: 5min, 3min, 5min, 6min, 6min
 - Trend: Steady
 
 ## Accumulated Context
@@ -59,6 +59,10 @@ Recent decisions affecting current work:
 | 02-03 | Segmented picker for source selection | Clear, native iOS pattern |
 | 02-03 | Reuse TextInputView for paste tab | Consistency with Phase 1 |
 | 02-03 | Validate all sources through TextValidator | Uniform validation |
+| 03-01 | @AppStorage for fontSize/colorScheme/focusMode | Persistence with @ObservationIgnored to avoid conflicts |
+| 03-01 | ColorScheme stored as String | Computed property maps String↔ColorScheme? for @AppStorage |
+| 03-01 | Font size range 16-48, step 2 | Accessibility range, default 32 matches Phase 1 |
+| 03-01 | Settings passed from seedApp level | Single source of truth for all views |
 | 03-02 | AppSettings with @Observable + @AppStorage | Centralized settings with persistence |
 | 03-02 | TabView + PageTabViewStyle for onboarding | Native iOS onboarding pattern |
 | 03-02 | Live RSVP demo on page 2 | Shows real engine behavior vs mocked |
@@ -74,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-01-19T05:07:13Z
-Stopped at: Completed 03-02-PLAN.md (Interactive Onboarding)
+Last session: 2026-01-19T05:07:38Z
+Stopped at: Completed 03-01-PLAN.md (Settings Infrastructure)
 Resume file: None
