@@ -13,6 +13,7 @@ class RSVPEngine {
     private var displayLink: CADisplayLink?
     private var lastTimestamp: CFTimeInterval = 0
     private var accumulatedTime: TimeInterval = 0
+    var onCompletion: (() -> Void)?
 
     private var baseInterval: TimeInterval {
         60.0 / Double(playbackState.wpm)
@@ -80,6 +81,7 @@ class RSVPEngine {
         guard playbackState.currentIndex < playbackState.words.count - 1 else {
             playbackState.pause()
             stop()
+            onCompletion?()
             return
         }
 
