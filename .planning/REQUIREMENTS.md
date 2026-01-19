@@ -51,9 +51,9 @@ Complete UX redesign from analytics-heavy to focused library-based flow.
 
 ### Code Structure
 
-- [ ] **CODE-01**: Codebase organized with Screens/ folder
-- [ ] **CODE-02**: Codebase organized with Components/ folder
-- [ ] **CODE-03**: Clean separation of concerns (views, models, services)
+- [x] **CODE-01**: Codebase organized with Screens/ folder
+- [x] **CODE-02**: Codebase organized with Components/ folder
+- [x] **CODE-03**: Clean separation of concerns (views, models, services)
 
 ## v2.0 Removed (from v1)
 

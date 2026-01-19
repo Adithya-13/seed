@@ -45,10 +45,10 @@ v2.0 transforms Seed from analytics-heavy to focused library-based flow. Reorgan
   2. All reusable components in Components/ folder
   3. v1 code builds and runs after reorganization
 **Research**: Unlikely (internal refactor)
-**Plans**: TBD
+**Status**: Complete (2026-01-19)
 
 Plans:
-- [ ] 05-01: TBD
+- [x] 05-01: Code Reorganization
 
 #### Phase 6: SwiftData Library
 **Goal**: Persistent text library with SwiftData
@@ -127,7 +127,7 @@ Plans:
 | 2. Core RSVP | v1.0 | 3/3 | Complete | 2026-01-19 |
 | 3. Input Sources | v1.0 | 3/3 | Complete | 2026-01-19 |
 | 4. Polish | v1.0 | 2/2 | Complete | 2026-01-19 |
-| 5. Code Reorganization | v2.0 | 0/1 | Not started | - |
+| 5. Code Reorganization | v2.0 | 1/1 | Complete | 2026-01-19 |
 | 6. SwiftData Library | v2.0 | 0/2 | Not started | - |
 | 7. Bottom Sheet Session | v2.0 | 0/2 | Not started | - |
 | 8. Anchor Visualization | v2.0 | 0/1 | Not started | - |
