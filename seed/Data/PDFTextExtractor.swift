@@ -30,6 +30,13 @@ enum PDFExtractionError: Error, LocalizedError {
 
 actor PDFTextExtractor {
     func extractText(from url: URL) async throws -> String {
+        let accessed = url.startAccessingSecurityScopedResource()
+        defer {
+            if accessed {
+                url.stopAccessingSecurityScopedResource()
+            }
+        }
+
         guard let pdfDoc = PDFDocument(url: url) else {
             throw PDFExtractionError.invalidPDF
         }
