@@ -2,11 +2,31 @@
 
 ## What This Is
 
-iOS app that trains users to read faster using RSVP (Rapid Serial Visual Presentation) method. Displays text word-by-word with smart anchoring (bold first letters) in a distraction-free interface. Users import text from multiple sources (paste, URL, PDF) and train at adjustable speeds with session tracking and progress analytics.
+iOS app that trains users to read faster using RSVP (Rapid Serial Visual Presentation) method. Displays text word-by-word with visual anchoring in a distraction-free interface. Users save texts from multiple sources (paste, URL, PDF) to a persistent library and launch focused reading sessions with adjustable speeds.
 
 ## Core Value
 
 Smooth, distraction-free RSVP playback that actually helps users read faster through focused, single-word presentation with visual anchoring.
+
+## Current Milestone: v2.0 Focused Library
+
+**Goal:** Complete UX redesign from analytics-heavy to focused library-based flow with simplified session experience and improved anchor visualization.
+
+**Target features:**
+- Saved Text Library with SwiftData persistence (title, word count, last read)
+- Bottom Sheet Session Flow with 3 input modes (text/link/PDF), WPM selector
+- New Anchor Visualization: vertical line aligned to anchor char (25-30% width) + colored anchor char only
+- Simplified Session Screen: clean RSVP display with play/pause + progress slider only
+- Completion Toast: simple "Session complete" message, return to library
+- Code Reorganization: Screens/ and Components/ folder structure
+
+**Removing from v1:**
+- Onboarding flow (interactive demo)
+- Tab navigation (Input/Reading/History tabs)
+- Comprehension quiz feature
+- History dashboard with WPM charts
+- Session tracking and analytics
+- @AppStorage session persistence
 
 ## Requirements
 
@@ -14,16 +34,23 @@ Smooth, distraction-free RSVP playback that actually helps users read faster thr
 
 - ✓ 60fps RSVP engine with smart anchoring (1-3 letters) and dynamic timing — v1.0
 - ✓ Multi-source input: paste, URL article extraction, PDF text extraction — v1.0
-- ✓ Interactive onboarding with live RSVP demo — v1.0
+- ✓ Interactive onboarding with live RSVP demo — v1.0 (removing in v2.0)
 - ✓ Eye-friendly color palette and focus mode — v1.0
-- ✓ Session tracking with completion stats (time, WPM, word count) — v1.0
-- ✓ History dashboard with WPM trend charts — v1.0
-- ✓ Optional comprehension quiz after reading — v1.0
+- ✓ Session tracking with completion stats (time, WPM, word count) — v1.0 (removing in v2.0)
+- ✓ History dashboard with WPM trend charts — v1.0 (removing in v2.0)
+- ✓ Optional comprehension quiz after reading — v1.0 (removing in v2.0)
 - ✓ Apple HIG compliance with native iOS patterns — v1.0
 
 ### Active
 
-(None - define requirements for next milestone via `/gsd:define-requirements`)
+- [ ] SwiftData persistence for saved texts (replace @AppStorage)
+- [ ] Saved Text Library screen with empty/populated states
+- [ ] Bottom sheet session setup flow
+- [ ] 3 input modes: text paste, link extraction, PDF upload
+- [ ] New anchor visualization: vertical line + colored anchor char
+- [ ] Simplified session screen: RSVP display + play/pause + progress slider
+- [ ] Completion toast notification
+- [ ] Code reorganization: Screens/ and Components/ folders
 
 ### Out of Scope
 
@@ -57,9 +84,11 @@ Smooth, distraction-free RSVP playback that actually helps users read faster thr
 ## Constraints
 
 - **Platform**: iOS (SwiftUI) — native, modern Apple development
-- **Architecture**: Clean architecture (data, domain, presentation)
+- **Persistence**: SwiftData for saved texts — replace @AppStorage approach
+- **Architecture**: Clean architecture with Screens/ and Components/ separation
 - **Design**: Apple HIG compliance — native iOS patterns and conventions
 - **Performance**: Smooth word display at configurable WPM — timing precision critical for RSVP
+- **Anchor line**: 25-30% of character width — fixed visual reference point
 - **Accessibility**: Eye-friendly colors — reading comfort over aesthetics
 
 ## Key Decisions
@@ -81,4 +110,4 @@ Smooth, distraction-free RSVP playback that actually helps users read faster thr
 | TabView navigation | Input, Reading, History tabs for clean UX | ✓ Good |
 
 ---
-*Last updated: 2026-01-19 after v1.0 milestone*
+*Last updated: 2026-01-19 after v2.0 milestone start*

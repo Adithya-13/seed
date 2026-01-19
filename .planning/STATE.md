@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-01-19)
 
 **Core value:** Smooth, distraction-free RSVP playback that actually helps users read faster through focused, single-word presentation with visual anchoring.
-**Current focus:** v1.0 complete — planning next milestone
+**Current focus:** v2.0 Focused Library — library-based flow with simplified sessions
 
 ## Current Position
 
-Phase: v1.0 milestone complete
+Phase: Not started (run /gsd:create-roadmap)
 Plan: —
-Status: Ready for next milestone
-Last activity: 2026-01-19 — v1.0 MVP shipped
+Status: Defining requirements
+Last activity: 2026-01-19 — Milestone v2.0 Focused Library started
 
 Progress: ████████████████████████████ (v1.0 complete - 11 plans)
 
