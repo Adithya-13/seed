@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var viewModel = RSVPViewModel()
     @State private var hasLoadedText = false
+    @State private var showFocusModeHint = false
     var settings: AppSettings
 
     private var readingBackground: Color {
@@ -29,9 +30,39 @@ struct ContentView: View {
                                 viewModel.play()
                             }
                         }
+                        .onLongPressGesture(minimumDuration: 1.0) {
+                            settings.focusMode = false
+                        }
+
+                    if showFocusModeHint {
+                        VStack(spacing: 12) {
+                            Image(systemName: "hand.tap.fill")
+                                .font(.system(size: 40))
+                            Text("Tap: Play/Pause")
+                                .font(.headline)
+                            Text("Long press: Exit")
+                                .font(.subheadline)
+                        }
+                        .foregroundColor(.white)
+                        .padding(24)
+                        .background(Color.black.opacity(0.8))
+                        .cornerRadius(16)
+                        .transition(.opacity)
+                    }
                 }
                 .statusBarHidden(true)
                 .persistentSystemOverlays(.hidden)
+                .onChange(of: settings.focusMode) { _, newValue in
+                    if newValue {
+                        showFocusModeHint = true
+                        Task {
+                            try? await Task.sleep(nanoseconds: 3_000_000_000)
+                            withAnimation {
+                                showFocusModeHint = false
+                            }
+                        }
+                    }
+                }
                 .sheet(isPresented: $viewModel.sessionCompleted) {
                     if let session = viewModel.lastSession {
                         CompletionStatsView(session: session) {

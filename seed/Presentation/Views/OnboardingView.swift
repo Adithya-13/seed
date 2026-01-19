@@ -25,13 +25,16 @@ struct OnboardingView: View {
                 BenefitsPage()
                     .tag(2)
 
-                GetStartedPage(onComplete: handleCompletion)
+                FocusModePage()
                     .tag(3)
+
+                GetStartedPage(onComplete: handleCompletion)
+                    .tag(4)
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
 
-            if currentPage < 3 {
+            if currentPage < 4 {
                 Button("Skip") {
                     handleCompletion()
                 }
@@ -163,6 +166,67 @@ struct BenefitRow: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
+        }
+    }
+}
+
+struct FocusModePage: View {
+    var body: some View {
+        VStack(spacing: 40) {
+            Spacer()
+
+            Text("Focus Mode Gestures")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+
+            VStack(spacing: 30) {
+                GestureInstruction(
+                    icon: "hand.tap.fill",
+                    title: "Tap",
+                    description: "Play or pause reading"
+                )
+
+                GestureInstruction(
+                    icon: "hand.point.up.fill",
+                    title: "Long Press",
+                    description: "Exit focus mode"
+                )
+            }
+            .padding(.horizontal)
+
+            Text("Enable Focus Mode in Settings for distraction-free reading")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+
+            Spacer()
+        }
+        .padding()
+    }
+}
+
+struct GestureInstruction: View {
+    let icon: String
+    let title: String
+    let description: String
+
+    var body: some View {
+        HStack(spacing: 20) {
+            Image(systemName: icon)
+                .font(.system(size: 50))
+                .foregroundStyle(.blue)
+                .frame(width: 80)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                Text(description)
+                    .font(.body)
+                    .foregroundStyle(.secondary)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }
