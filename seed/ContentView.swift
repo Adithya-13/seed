@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var viewModel = RSVPViewModel()
+    @State private var sessionStore = SessionStore()
+    @State private var viewModel: RSVPViewModel?
     @State private var hasLoadedText = false
     @State private var showFocusModeHint = false
     var settings: AppSettings
@@ -18,16 +19,16 @@ struct ContentView: View {
     }
 
     var body: some View {
-        if hasLoadedText {
+        if hasLoadedText, let vm = viewModel {
             if settings.focusMode {
                 ZStack {
                     readingBackground.ignoresSafeArea()
-                    RSVPDisplayView(playbackState: viewModel.playbackState, settings: settings)
+                    RSVPDisplayView(playbackState: vm.playbackState, settings: settings)
                         .onTapGesture {
-                            if viewModel.playbackState.isPlaying {
-                                viewModel.pause()
+                            if vm.playbackState.isPlaying {
+                                vm.pause()
                             } else {
-                                viewModel.play()
+                                vm.play()
                             }
                         }
                         .onLongPressGesture(minimumDuration: 1.0) {
@@ -63,58 +64,87 @@ struct ContentView: View {
                         }
                     }
                 }
-                .sheet(isPresented: $viewModel.sessionCompleted) {
-                    if let session = viewModel.lastSession {
+                .sheet(isPresented: Binding(
+                    get: { vm.sessionCompleted },
+                    set: { vm.sessionCompleted = $0 }
+                )) {
+                    if let session = vm.lastSession {
                         CompletionStatsView(session: session) {
-                            viewModel.sessionCompleted = false
+                            vm.sessionCompleted = false
                         }
                     }
                 }
             } else {
-                VStack(spacing: 32) {
-                    Spacer()
-
-                    RSVPDisplayView(playbackState: viewModel.playbackState, settings: settings)
-
-                    Spacer()
-
-                    PlaybackControlsView(
-                        playbackState: viewModel.playbackState,
-                        onPlay: viewModel.play,
-                        onPause: viewModel.pause,
-                        onSeek: viewModel.seek,
-                        onAdjustSpeed: viewModel.adjustSpeed
-                    )
-                }
-                .padding()
-                .preferredColorScheme(settings.colorScheme)
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        NavigationLink {
-                            SettingsView(settings: settings)
-                        } label: {
-                            Image(systemName: "gearshape.fill")
+                TabView {
+                    NavigationView {
+                        InputSourcePicker { validatedText in
+                            viewModel?.loadText(validatedText)
                         }
                     }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            resetToInput()
-                        } label: {
-                            Image(systemName: "arrow.counterclockwise")
+                    .tabItem {
+                        Label("Input", systemImage: "doc.text")
+                    }
+
+                    NavigationView {
+                        VStack(spacing: 32) {
+                            Spacer()
+
+                            RSVPDisplayView(playbackState: vm.playbackState, settings: settings)
+
+                            Spacer()
+
+                            PlaybackControlsView(
+                                playbackState: vm.playbackState,
+                                onPlay: vm.play,
+                                onPause: vm.pause,
+                                onSeek: vm.seek,
+                                onAdjustSpeed: vm.adjustSpeed
+                            )
+                        }
+                        .padding()
+                        .preferredColorScheme(settings.colorScheme)
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                NavigationLink {
+                                    SettingsView(settings: settings)
+                                } label: {
+                                    Image(systemName: "gearshape.fill")
+                                }
+                            }
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button {
+                                    resetToInput()
+                                } label: {
+                                    Image(systemName: "arrow.counterclockwise")
+                                }
+                            }
                         }
                     }
+                    .tabItem {
+                        Label("Reading", systemImage: "play.circle")
+                    }
+
+                    HistoryView(sessionStore: sessionStore)
+                        .tabItem {
+                            Label("History", systemImage: "chart.line.uptrend.xyaxis")
+                        }
                 }
-                .sheet(isPresented: $viewModel.sessionCompleted) {
-                    if let session = viewModel.lastSession {
+                .sheet(isPresented: Binding(
+                    get: { vm.sessionCompleted },
+                    set: { vm.sessionCompleted = $0 }
+                )) {
+                    if let session = vm.lastSession {
                         CompletionStatsView(session: session) {
-                            viewModel.sessionCompleted = false
+                            vm.sessionCompleted = false
                         }
                     }
                 }
             }
         } else {
             InputSourcePicker { validatedText in
-                viewModel.loadText(validatedText)
+                let vm = RSVPViewModel(sessionStore: sessionStore)
+                vm.loadText(validatedText)
+                viewModel = vm
                 hasLoadedText = true
             }
         }
@@ -122,7 +152,7 @@ struct ContentView: View {
 
     private func resetToInput() {
         hasLoadedText = false
-        viewModel.playbackState.pause()
+        viewModel?.playbackState.pause()
     }
 }
 
